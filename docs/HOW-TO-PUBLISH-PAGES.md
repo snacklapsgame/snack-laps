@@ -11,7 +11,7 @@ The public pages already use these details:
 - Privacy: `https://snacklapsgame.github.io/snack-laps/privacy.html`
 - Support: `https://snacklapsgame.github.io/snack-laps/support.html`
 
-The copyright line in the HTML footers and in `APP-STORE-LISTING.md` still says `[YOUR NAME OR STUDIO]`. Type your legal name or studio name there before you submit to Apple.
+The copyright line on the pages is © 2026 Bryan Moore. The App Store copyright field is `2026 Bryan Moore` because Apple adds the symbol itself.
 
 Do not put your Apple password, API key, `.p8` key, card number or other secrets into any of these files. Everything in a public repository is public. Pages itself is public even when an eligible paid plan lets you keep the source private.
 
