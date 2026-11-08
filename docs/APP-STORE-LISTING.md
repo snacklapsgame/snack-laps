@@ -153,18 +153,18 @@ Select other purposes/data types only when actually used. Do not select **Develo
 Privacy Policy URL:
 
 ```text
-https://USERNAME.github.io/REPO/privacy.html
+https://snacklapsgame.github.io/snack-laps/privacy.html
 ```
 
 Optional Privacy Choices URL (the policy explains the current available choices):
 
 ```text
-https://USERNAME.github.io/REPO/privacy.html
+https://snacklapsgame.github.io/snack-laps/privacy.html
 ```
 
 ### Privacy / ad checks before release
 
-1. Replace `[YOUR EMAIL]` and `[YOUR NAME OR STUDIO]` in the web pages. Choose an inbox you actually monitor; we have not chosen or created one for you.
+1. The public contact email on the web pages is snacklapsgame@gmail.com. The copyright footers still say `[YOUR NAME OR STUDIO]` until you type your legal name or studio name.
 2. On each iPhone launch the app requests Google UMP consent info, shows the consent form when the status is REQUIRED and a form is available, and only then initializes the Mobile Ads SDK or loads a banner or rewarded ad — and only when `canRequestAds` is exactly true. A missing flag or a failed consent call is not treated as permission. Gameplay continues either way. `GADDelayAppMeasurementInit` is set so Google measurement waits for that initialization. Unit tests cover this gate. It has not been confirmed on a physical iPhone.
 3. The iPhone start screen and game-over screen show **Privacy / Ad Settings**. When `privacyOptionsRequirementStatus` is REQUIRED, that button opens Google's privacy options form, reads consent again, and removes the banner if ads are no longer allowed. The control is hidden in the browser and does nothing if activated there. The privacy policy describes this control. Confirm the real form and a withdrawn choice on TestFlight. If you publish an AdMob IDFA explainer, set `UMP_PRESENTS_ATT` to `true` so the app does not show a second tracking prompt. See README-APPSTORE.md.
 4. Configure child/teen treatment and suitable ad-content restrictions for the audience and applicable laws. No age verification is implemented; do not claim it is.
@@ -186,16 +186,16 @@ Apple adds the copyright symbol in its display, so the field above omits it. Do 
 ### Support URL
 
 ```text
-https://USERNAME.github.io/REPO/support.html
+https://snacklapsgame.github.io/snack-laps/support.html
 ```
 
 ### Marketing URL
 
 ```text
-https://USERNAME.github.io/REPO/
+https://snacklapsgame.github.io/snack-laps/
 ```
 
-These are project-site URLs: do not include `/docs/` in the public address. Replace `USERNAME` and `REPO` with the exact GitHub username and repository name. Wait for Pages to publish and open every link in Safari before pasting it into App Store Connect. The landing page deliberately has no fake App Store download button.
+These are the live project-site URLs for `snacklapsgame/snack-laps`. Do not include `/docs/` in the public address. Open every link in Safari before pasting it into App Store Connect. The landing page deliberately has no fake App Store download button.
 
 ## Version 1.0 note
 

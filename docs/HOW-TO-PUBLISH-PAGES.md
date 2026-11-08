@@ -2,20 +2,23 @@
 
 You only need Safari, the Files app and a GitHub account. There is nothing to buy for a standard GitHub Pages site in a **public** repository on GitHub Free. A private repository generally needs an eligible paid plan for Pages.
 
-## 1. Replace the blanks first
+## 1. What is already filled in
 
-Open the files in an iPhone text editor, or edit them with GitHub's pencil button after uploading:
+The public pages already use these details:
 
-- Replace `[YOUR EMAIL]` in **all three HTML pages** with an email address you will check.
-- Replace `[YOUR NAME OR STUDIO]` in their footers with your name or studio name.
-- In your own listing notes, replace `USERNAME` and `REPO` in the example links with your GitHub username and repository name.
+- Contact email: [snacklapsgame@gmail.com](mailto:snacklapsgame@gmail.com)
+- Marketing: `https://snacklapsgame.github.io/snack-laps/`
+- Privacy: `https://snacklapsgame.github.io/snack-laps/privacy.html`
+- Support: `https://snacklapsgame.github.io/snack-laps/support.html`
+
+The copyright line in the HTML footers and in `APP-STORE-LISTING.md` still says `[YOUR NAME OR STUDIO]`. Type your legal name or studio name there before you submit to Apple.
 
 Do not put your Apple password, API key, `.p8` key, card number or other secrets into any of these files. Everything in a public repository is public. Pages itself is public even when an eligible paid plan lets you keep the source private.
 
 ## 2. Get the files into the repo
 
 1. Save `snack-laps-listing.zip` to **Files** on your iPhone. Tap it to unzip it.
-2. In Safari, go to **github.com**, sign in, and open the repository you use for the app/Codemagic. If you do not have one, create it first. Your `main` branch needs at least one file, such as a README.
+2. In Safari, go to **https://github.com/snacklapsgame/snack-laps**, sign in, and open that repository. Your `main` branch needs at least one file, such as a README.
 3. Make sure the site's files end up in a folder named exactly **docs**, at the top level of the repo — next to `www`, `ios` and `package.json`, not inside `www`.
 4. If the repo already has a `docs` folder, open it. Choose **Add file → Upload files**, tap **choose your files**, select the HTML and Markdown files from Files, then **Commit changes** to `main`.
 5. If `docs` does not exist, use **Add file → Create new file**. Enter `docs/.nojekyll` as the filename, add a short line such as `Static pages`, and commit it. This creates the folder. Then open `docs` and upload the HTML and Markdown files as above.
@@ -43,7 +46,7 @@ docs/
 google.com, pub-6414962483147556, DIRECT, f08c47fec0942fa0
 ```
 
-After Pages is on, that file is published at `https://USERNAME.github.io/REPO/app-ads.txt`. Open it in Safari and check that the line matches AdMob exactly. AdMob looks for `app-ads.txt` on the developer website you enter for the app. A project site address includes `/REPO/`, so also confirm in AdMob that it can read this URL. If AdMob asks for the file at `https://USERNAME.github.io/app-ads.txt` (no repository name), that is a different address; use a domain you control, or a GitHub user site, when you are ready for that check. Do not change the publisher id in the file.
+After Pages is on, that file is published at `https://snacklapsgame.github.io/snack-laps/app-ads.txt`. Open it in Safari and check that the line matches AdMob exactly. AdMob looks for `app-ads.txt` on the developer website you enter for the app. This project site includes `/snack-laps/` in the address, so confirm in AdMob that it can read `https://snacklapsgame.github.io/snack-laps/app-ads.txt`. If AdMob asks for the file at `https://snacklapsgame.github.io/app-ads.txt` (no repository name), that is a different address; use a domain you control, or a GitHub user site, when you are ready for that check. Do not change the publisher id in the file.
 
 The two Markdown guides can stay in `docs` too. If the entire app project was already uploaded with this new `docs` folder intact, skip the individual upload steps.
 
@@ -59,12 +62,12 @@ The two Markdown guides can stay in `docs` too. If the entire app project was al
 
 Replace the CAPITAL words below with your own details:
 
-- Landing / marketing: `https://USERNAME.github.io/REPO/`
-- Privacy: `https://USERNAME.github.io/REPO/privacy.html`
-- Support: `https://USERNAME.github.io/REPO/support.html`
-- App ads authorization: `https://USERNAME.github.io/REPO/app-ads.txt`
+- Landing / marketing: `https://snacklapsgame.github.io/snack-laps/`
+- Privacy: `https://snacklapsgame.github.io/snack-laps/privacy.html`
+- Support: `https://snacklapsgame.github.io/snack-laps/support.html`
+- App ads authorization: `https://snacklapsgame.github.io/snack-laps/app-ads.txt`
 
-There is **no `/docs/`** in these public URLs. These examples assume an ordinary project repository, not a special repository named `USERNAME.github.io`.
+There is **no `/docs/`** in these public URLs. They belong to the project repository `snacklapsgame/snack-laps`, not a user site whose repository is named `snacklapsgame.github.io`.
 
 Open all three pages and `app-ads.txt`. Check the banner and icon, tap the navigation links, and make sure your real contact email appears. The ads file should be exactly one line, the publisher id included. If you see 404, check the branch/folder setting, exact filename spelling and the repo's **Actions** tab for the Pages build result. If you see old content, refresh or reopen in a private Safari tab.
 

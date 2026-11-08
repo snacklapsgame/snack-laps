@@ -105,7 +105,7 @@ You do this on the AdMob website. You do not need a Mac.
 7. Under user choices, decide whether **Do not consent** is on. On means a player can refuse on the first page of the message. You can limit that button to certain countries.
 8. Under targeting, leave **Countries subject to GDPR (EEA, UK, and Switzerland)** unless you have a reason to show this message everywhere.
 9. Name the message something only you will see, such as `Snack Laps GDPR`.
-10. Add your privacy policy URL. Use the live GitHub Pages address, for example `https://USERNAME.github.io/REPO/privacy.html`. Open that link in Safari first and confirm the page loads. A draft URL will not do.
+10. The privacy policy URL is `https://snacklapsgame.github.io/snack-laps/privacy.html`. Open that link in Safari first and confirm the page loads. A draft URL will not do.
 11. Read the message text. Google's wording is fine to keep. Fix anything that does not match Snack Laps (the game has no account).
 12. Decide who shows the iPhone tracking prompt. This is the part that prevents two prompts.
     - **No IDFA explainer published (this is the project default).** Leave `UMP_PRESENTS_ATT` as `false` in `scripts/native-bridge.js`. After the GDPR message, the app asks for tracking once, and only if the iPhone has not already answered. It asks before Game Center, so Game Center's welcome does not cover the prompt. It does not ask again on the same launch.
