@@ -1,0 +1,75 @@
+# Codemagic CI — iOS build + TestFlight upload for Snack Laps
+# Docs: https://docs.codemagic.io/yaml-quick-start/building-a-capacitor-app/
+#
+# PLACEHOLDER secrets (set these in Codemagic UI → Environment variables,
+# group name "app_store_credentials"):
+#   APP_STORE_CONNECT_ISSUER_ID   — App Store Connect → Users and Access → Keys
+#   APP_STORE_CONNECT_KEY_IDENTIFIER
+#   APP_STORE_CONNECT_PRIVATE_KEY  — contents of AuthKey_XXXXXX.p8 (secure)
+#   CERTIFICATE_PRIVATE_KEY       — optional; Codemagic can generate signing certs
+#
+# Also set APPLE_ID / APPLE_TEAM_ID in the UI or below once you have them.
+
+workflows:
+  ios-testflight:
+    name: Snack Laps iOS → TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+    integrations:
+      # PLACEHOLDER — after connecting App Store Connect in Codemagic, rename to your integration
+      app_store_connect: snacklaps_asc
+    environment:
+      ios_signing:
+        bundle_identifier: com.snacklaps.game
+        # PLACEHOLDER provisioning — Codemagic will create/fetch with API key
+        provisioning_profiles:
+          - snacklaps_appstore
+        certificates:
+          - snacklaps_distribution
+      vars:
+        XCODE_WORKSPACE: "ios/App/App.xcodeproj"
+        XCODE_SCHEME: "App"
+        APP_STORE_APP_ID: "0000000000" # PLACEHOLDER — numeric Apple ID from App Store Connect
+        APP_STORE_APPLE_ID: "you@example.com" # PLACEHOLDER
+        BUNDLE_ID: "com.snacklaps.game"
+        # Node for Capacitor sync
+        NODE_VERSION: "22"
+      node: 22
+      xcode: latest
+      groups:
+        - app_store_credentials
+    scripts:
+      - name: Install npm dependencies
+        script: |
+          npm ci || npm install
+          node scripts/patch-game-connect-spm.js
+      - name: Build web + Capacitor sync
+        script: |
+          npm run build:web || true
+          npx cap sync ios
+      - name: Set up keychain & signing
+        script: |
+          xcode-project use-profiles
+      - name: Build ipa
+        script: |
+          xcode-project build-ipa \
+            --project "$CM_BUILD_DIR/ios/App/App.xcodeproj" \
+            --scheme App
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      email:
+        recipients:
+          - you@example.com # PLACEHOLDER
+        notify:
+          success: true
+          failure: true
+      app_store_connect:
+        # Uses the integration above + API key env vars
+        auth: integration
+        # PLACEHOLDER submit options — keep false until you're ready for App Review
+        submit_to_testflight: true
+        beta_groups: [] # add internal/external group names later
+        submit_to_app_store: false

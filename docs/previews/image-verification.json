@@ -1,0 +1,74 @@
+[
+  {
+    "file": "images/appstore-icon.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "images/promo-banner-1200x400.png",
+    "dimensions": [
+      1200,
+      400
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "previews/index-iphone-full.png",
+    "dimensions": [
+      780,
+      3114
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "previews/index-iphone.png",
+    "dimensions": [
+      780,
+      1688
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "previews/pages-contact-sheet.png",
+    "dimensions": [
+      1230,
+      944
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "previews/privacy-iphone-full.png",
+    "dimensions": [
+      780,
+      10990
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "previews/privacy-iphone.png",
+    "dimensions": [
+      780,
+      1688
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "previews/support-iphone-full.png",
+    "dimensions": [
+      780,
+      6976
+    ],
+    "mode": "RGB"
+  },
+  {
+    "file": "previews/support-iphone.png",
+    "dimensions": [
+      780,
+      1688
+    ],
+    "mode": "RGB"
+  }
+]

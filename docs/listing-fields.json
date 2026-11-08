@@ -1,0 +1,32 @@
+{
+  "App Name": {
+    "text": "Snack Laps",
+    "characters": 10,
+    "limit": 30
+  },
+  "Subtitle": {
+    "text": "Tiny paws. Big adventures.",
+    "characters": 26,
+    "limit": 30
+  },
+  "Promotional Text": {
+    "text": "Hold to run. Let go to hop! Munch treats, dodge trouble, unlock 101 pets and explore 16 colorful places. Chase a new best with music that builds as you play.",
+    "characters": 157,
+    "limit": 170
+  },
+  "Description": {
+    "text": "Tiny paws. Big adventures.\n\nSnack Laps is a colorful, one-touch arcade game about a hungry pet and one more lap. Hold the screen to run on the outside track. Let go to hop to the inside track. Munch treats, dodge trouble and chase your next personal best.\n\nSIMPLE TO LEARN, FUN TO MASTER\nSwap between two tracks with a hold and release. Keep collecting treats to build your combo and earn more points per bite.\n\n101 PETS TO UNLOCK\nStart with Pup and unlock another pet at every 50-point best-score milestone. Reach 5,000 points to complete the collection of 101. Pick your favorite look and bring a new friend on your next run. Unlocks use your best single-run score, not points added across runs.\n\n16 COLORFUL PLACES\nVisit a new place every 50 points, from the park and beach to Candy Land and beyond. Discover all 16, then keep running as the places cycle with fresh color twists.\n\nA LITTLE MORE TROUBLE\nBegin with puddles. A new obstacle type joins every 50 points through 200 points: bees, cacti, rocks and hedgehogs. That makes five obstacle types to keep you hopping.\n\nBUILD THE BEAT\nMusic adds layers as your combo builds, with treats adding notes along the way. Tap the speaker button whenever you want a quieter lap.\n\nONE MORE CHANCE\nAfter your first crash, choose to watch a rewarded ad for one continue in that run. Earn the reward, get ready with a 3-2-1 countdown and hop back in.\n\nCHASE YOUR BEST\nKeep a personal top 10 on your device and compare your best score on the Apple Game Center leaderboard. No separate Snack Laps account is needed.\n\nThe game includes banner ads and an optional rewarded-ad continue. Ads and Game Center require an internet connection. Game Center uses your Apple Game Center sign-in. Local progress and settings are saved on your device; there is no developer-operated cloud save.\n\nReady for one more treat?",
+    "characters": 1849,
+    "limit": 4000
+  },
+  "Keywords": {
+    "text": "arcade,casual,runner,pets,puppy,animals,treats,reflex,timing,collect,onehand,leaderboard,music",
+    "characters": 94,
+    "limit": 100
+  },
+  "What's New (version 1.0)": {
+    "text": "Welcome to Snack Laps! Hold to run, let go to hop, unlock 101 pets and explore 16 colorful places. Build the beat, chase your personal best and compare scores with Game Center.",
+    "characters": 176,
+    "limit": 4000
+  }
+}

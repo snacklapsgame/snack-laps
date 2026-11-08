@@ -1,0 +1,85 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "errors": [],
+  "externalRequests": [],
+  "pages": [
+    {
+      "page": "index.html",
+      "title": "Home | Snack Laps",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "height": 1557,
+      "images": [
+        {
+          "src": "images/appstore-icon.png",
+          "ok": true
+        },
+        {
+          "src": "images/promo-banner-1200x400.png",
+          "ok": true
+        },
+        {
+          "src": "images/appstore-icon.png",
+          "ok": true
+        }
+      ],
+      "localLinks": [
+        "index.html",
+        "index.html",
+        "support.html",
+        "privacy.html",
+        "support.html",
+        "privacy.html",
+        "support.html",
+        "support.html",
+        "privacy.html"
+      ]
+    },
+    {
+      "page": "privacy.html",
+      "title": "Privacy | Snack Laps",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "height": 5495,
+      "images": [
+        {
+          "src": "images/appstore-icon.png",
+          "ok": true
+        }
+      ],
+      "localLinks": [
+        "index.html",
+        "index.html",
+        "support.html",
+        "privacy.html",
+        "support.html",
+        "privacy.html"
+      ]
+    },
+    {
+      "page": "support.html",
+      "title": "Support | Snack Laps",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "height": 3488,
+      "images": [
+        {
+          "src": "images/appstore-icon.png",
+          "ok": true
+        }
+      ],
+      "localLinks": [
+        "index.html",
+        "index.html",
+        "support.html",
+        "privacy.html",
+        "support.html",
+        "privacy.html"
+      ]
+    }
+  ]
+}

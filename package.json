@@ -1,0 +1,41 @@
+{
+  "name": "snack-laps-app",
+  "version": "1.0.0",
+  "description": "Snack Laps — Capacitor iOS wrapper for Codemagic / TestFlight",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node scripts/patch-game-connect-spm.js",
+    "build:web": "esbuild scripts/native-bridge.js --bundle --format=iife --outfile=www/native.bundle.js --platform=browser --target=es2019",
+    "build:assets": "npx capacitor-assets generate --ios --iconBackgroundColor \"#3fae55\" --splashBackgroundColor \"#3fae55\"",
+    "sync:ios": "npm run build:web && npx cap sync ios",
+    "test": "node --test scripts/consent-flow.test.mjs",
+    "verify:web": "node scripts/verify-web.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@capacitor-community/admob": "^8.3.0",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.6.0",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.4",
+    "capacitor-game-connect-8": "^8.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "puppeteer": "^25.16.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "puppeteer@25.16.0": true
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
